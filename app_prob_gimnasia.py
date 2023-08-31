@@ -42,7 +42,6 @@ gimnasia['Minutos'] = np.random.randint(0, 99, len(gimnasia))
 
 # Jugamos de local o de visitante
 gimnasia['Condicion'] = gimnasia['Condicion'].apply(lambda x: 1 if x == 'Local' else 0)
-gimnasia['primer_gol'] = gimnasia['primer_gol'].apply(lambda x: 1 if x == 'Local' else 0)
 
 
 # Gener vector de variables 
@@ -64,14 +63,21 @@ st.title("Gana el lobito")
 # Entrada para minutos
 minutos = st.number_input("Minutos:", min_value=0, max_value=98)
 
+# Crear una lista de opciones para la condición
+opciones_condicion = ['Local', 'Visitante']
+
+# Agregar el widget de selección para la condición
+condicion_elegida = st.radio("Selecciona la Condición:", opciones_condicion)
+
 # Entrada para diferencia de goles
 diferencia_goles = st.number_input("Diferencia de Goles:", step=1)
 
 # Botón para calcular probabilidades
 if st.button("Calcular Probabilidades"):
+    # Aquí puedes usar la variable 'condicion_elegida' en lugar de un valor fijo
     nueva_situacion = pd.DataFrame({
         'Diferencia_Goles': [diferencia_goles],
-        'Condicion': [1],  # Puedes cambiar esto según la condición deseada (Local o Visitante)
+        'Condicion': [1 if condicion_elegida == 'Local' else 0],
         'descanso': [8],
         'Dia_Semana_Saturday': [1],
         'Minutos': [minutos]
