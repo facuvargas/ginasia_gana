@@ -304,7 +304,7 @@ spyder @ file:///C:/Windows/TEMP/abs_66k5aq_mkw/croots/recipe/spyder_16595998053
 spyder-kernels @ file:///C:/ci/spyder-kernels_1647011408404/work
 SQLAlchemy @ file:///C:/Windows/Temp/abs_f8661157-660b-49bb-a790-69ab9f3b8f7c8a8s2psb/croots/recipe/sqlalchemy_1657867864564/work
 statsmodels==0.13.2
-streamlit==1.14.0
+scikit-learn==0.24.2
 sympy @ file:///C:/ci/sympy_1647853873858/work
 tables==3.6.1
 tabulate @ file:///C:/ci/tabulate_1657619055201/work
