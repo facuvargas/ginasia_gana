@@ -65,7 +65,7 @@ st.title("Gana el lobito")
 minutos = st.number_input("Minutos:", min_value=0, max_value=98)
 
 # Entrada para diferencia de goles
-diferencia_goles = st.number_input("Diferencia de Goles:")
+diferencia_goles = st.number_input("Diferencia de Goles:", step=1)
 
 # Botón para calcular probabilidades
 if st.button("Calcular Probabilidades"):
