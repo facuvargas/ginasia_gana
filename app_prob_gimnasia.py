@@ -60,14 +60,16 @@ model.fit(X, y)
 # Aplicación
 st.title("Gana el lobito")
 
-# Entrada para minutos
-minutos = st.number_input("Minutos:", min_value=0, max_value=98)
+
 
 # Crear una lista de opciones para la condición
 opciones_condicion = ['Local', 'Visitante']
 
 # Agregar el widget de selección para la condición
 condicion_elegida = st.radio("Selecciona la Condición:", opciones_condicion)
+
+# Entrada para minutos
+minutos = st.number_input("Minutos:", min_value=0, max_value=98)
 
 # Entrada para diferencia de goles
 diferencia_goles = st.number_input("Diferencia de Goles:", step=1)
